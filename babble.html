@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="section-container">
+        <h2>Event Bubble Ready</h2>
+        <ul id="ul-container">
+            <h3>items parents</h3>
+            <li>items-1</li>
+            <li id="second-item">items-2</li>
+            <li>items-3</li>
+            <li>items-4</li>
+            <li>items-5</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById("second-item").addEventListener("click",function (event){
+            event.stopPropagation()
+            console.log("second-item clicked");
+        })
+        document.getElementById("second-item").addEventListener("click",function (){
+            console.log("second-item clicked");
+        })
+        document.getElementById("second-item").addEventListener("click",function (){
+            console.log("second-item clicked");
+        })
+        document.getElementById("second-item").addEventListener("click",function (){
+            console.log("second-item clicked");
+        })
+        document.getElementById("second-item").addEventListener("click",function (){
+            console.log("second-item clicked");
+        })
+        document.getElementById("ul-container").addEventListener("click",function (){
+            console.log("ul-container clicked");
+        })
+        document.getElementById("section-container").addEventListener("click",function (){
+            console.log("section-container clicked");
+        })
+    </script>
+</body>
+</html>

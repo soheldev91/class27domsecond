@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment here</title>
+</head>
+<body>
+    <div id="comment-box">
+        <h3>comment here</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi nostrum dolores nulla officia dolorum, nihil totam eveniet unde minima magnam odio repellendus debitis optio culpa, voluptatem consectetur commodi quidem suscipit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi nostrum dolores nulla officia dolorum, nihil totam eveniet unde minima magnam odio repellendus debitis optio culpa, voluptatem consectetur commodi quidem suscipit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi nostrum dolores nulla officia dolorum, nihil totam eveniet unde minima magnam odio repellendus debitis optio culpa, voluptatem consectetur commodi quidem suscipit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi nostrum dolores nulla officia dolorum, nihil totam eveniet unde minima magnam odio repellendus debitis optio culpa, voluptatem consectetur commodi quidem suscipit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi nostrum dolores nulla officia dolorum, nihil totam eveniet unde minima magnam odio repellendus debitis optio culpa, voluptatem consectetur commodi quidem suscipit.</p>
+    </div>
+    <div>
+        <textarea name="" id="input-filed" cols="80" rows="10"></textarea>
+        <br>
+        <button id="commment-button">comment</button>
+        <script>
+            document.getElementById("commment-button").addEventListener("click",function() {
+                const textId = document.getElementById("input-filed");
+                const text = textId.value;
+                const p = document.createElement("p");
+                p.innerText = text;
+                const box = document.getElementById("comment-box");
+                box.appendChild(p)
+        })
+        </script>
+    </div>
+</body>
+</html>
